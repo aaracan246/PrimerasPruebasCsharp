@@ -12,5 +12,9 @@ public class Shield: Protection
             character.Inventory.Add(this);
             character.BaseArmor += armor;
         }
+        else
+        {
+            Console.WriteLine("That item is already equipped.");
+        }
     }
 }
