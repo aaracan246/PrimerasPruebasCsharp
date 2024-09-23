@@ -9,6 +9,16 @@ public class Greatsword: Weapon
 
     public override void Apply(Character character)
     {
-        character.BaseDamage += damage;
+        if (!character.Inventory.Contains(this))
+        {
+            character.Inventory.Add(this);
+            character.BaseDamage += damage;
+            
+        }
+        else
+        {
+            Console.WriteLine("That item is already equipped.");
+        }
+
     }
 }

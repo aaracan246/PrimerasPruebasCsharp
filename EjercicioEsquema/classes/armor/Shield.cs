@@ -7,6 +7,10 @@ public class Shield: Protection
 
     public override void Apply(Character character)
     {
-        character.BaseArmor += armor;
+        if (!character.Inventory.Contains(this))
+        {
+            character.Inventory.Add(this);
+            character.BaseArmor += armor;
+        }
     }
 }

@@ -4,8 +4,5 @@ namespace EjercicioEsquema.interfaces;
 
 public interface IItem
 {
-     public void Apply(Character character)
-     {
-          
-     }
+     public void Apply(Character character);
 }

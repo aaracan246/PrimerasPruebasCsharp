@@ -12,7 +12,11 @@ public class Character
     private int baseDamage = 5;
     private int baseArmor = 2;
 
+    private int burnDamage = 2;
+
     private List<IItem> _inventory = new List<IItem>();
+    
+    public List<IItem> Inventory { get => _inventory; set => _inventory = value; }
 
     public Character(string name)
     {
