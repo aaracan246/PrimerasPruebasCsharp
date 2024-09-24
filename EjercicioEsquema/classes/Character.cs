@@ -14,7 +14,7 @@ public class Character
 
     private int burnDamage = 2;
 
-    private List<IItem> _inventory = new List<IItem>();
+    private List<IItem> _inventory = new List<IItem>();  // Esto puede ir en el constructor primario, además, se puede realizar el Apply añadiendo y quitando items del inventario y añadir el inventario con cada movimiento attack o defence
     
     public List<IItem> Inventory { get => _inventory; set => _inventory = value; }
 
@@ -23,7 +23,7 @@ public class Character
         this.name = name;
         this.currentHitPoints = maxHitPoints;
     }
-
+    
     public string Name => name;
     public int MaxHitPoints => maxHitPoints;
     public int CurrentHitPoints => currentHitPoints;

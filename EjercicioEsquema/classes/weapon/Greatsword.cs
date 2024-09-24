@@ -2,9 +2,7 @@
 
 public class Greatsword: Weapon
 {
-    public Greatsword(string name, int dmg) : base(name, dmg)
-    {
-    }
+    public Greatsword(string name, int dmg) : base(name, dmg) { }
     
 
     public override void Apply(Character character)
@@ -13,7 +11,6 @@ public class Greatsword: Weapon
         {
             character.Inventory.Add(this);
             character.BaseDamage += damage;
-            
         }
         else
         {

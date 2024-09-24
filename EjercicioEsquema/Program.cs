@@ -6,7 +6,7 @@ using EjercicioEsquema.classes.weapon;
 
 Character champion = new Character("Morri");
 
-Greatsword gs = new Greatsword("Flamberge", 10);
+Greatsword gs = new  Greatsword("Flamberge", 10);
 Shield sh = new Shield("Holy Ward", 8);
 
 Console.WriteLine(champion.Name + " has arrived!");
