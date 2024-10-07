@@ -2,9 +2,11 @@
 
 public class Greatsword: Weapon
 {
-    public Greatsword(string name, int dmg) : base(name, dmg) { }
-    
 
+    public Greatsword(string name, int dmg) : base(name, dmg)
+    {
+        damage = dmg;
+    }
     public override void Apply(Character character)
     {
         if (!character.Inventory.Contains(this))
@@ -16,6 +18,5 @@ public class Greatsword: Weapon
         {
             Console.WriteLine("That item is already equipped.");
         }
-
     }
 }

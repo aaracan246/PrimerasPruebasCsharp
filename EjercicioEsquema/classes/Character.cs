@@ -12,16 +12,17 @@ public class Character
     private int baseDamage = 5;
     private int baseArmor = 2;
 
-    private int burnDamage = 2;
-
-    private List<IItem> _inventory = new List<IItem>();  // Esto puede ir en el constructor primario, además, se puede realizar el Apply añadiendo y quitando items del inventario y añadir el inventario con cada movimiento attack o defence
+    private List<IItem> _inventory = new List<IItem>(); // Esto puede ir en el constructor primario, además, se puede realizar el Apply añadiendo y quitando items del inventario y añadir el inventario con cada movimiento attack o defence
+    public List<IItem> Inventory => _inventory;
     
-    public List<IItem> Inventory { get => _inventory; set => _inventory = value; }
 
-    public Character(string name)
+    public Character(string name, int maxHitPoints, int currentHitPoints, int baseDamage, int baseArmor)
     {
         this.name = name;
-        this.currentHitPoints = maxHitPoints;
+        this.maxHitPoints = maxHitPoints;
+        this.currentHitPoints = currentHitPoints;
+        this.baseDamage = baseDamage;
+        this.baseArmor = baseArmor;
     }
     
     public string Name => name;
@@ -43,6 +44,7 @@ public class Character
     
     private int Attack()
     {
+        
         return baseDamage;
     }
 
