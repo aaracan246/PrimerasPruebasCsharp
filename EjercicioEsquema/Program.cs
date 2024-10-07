@@ -7,6 +7,8 @@ using EjercicioEsquema.classes.weapon;
 Character champion = new Character("Morri", 10, 10, 8, 8);
 
 Greatsword gs = new  Greatsword("Flamberge", 10);
+//FireSpirit fs = new FireSpirit("Pyro", 10, 10, 10);
+
 Shield sh = new Shield("Holy Ward", 8);
 
 Console.WriteLine(champion.Name + " has arrived!");

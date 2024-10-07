@@ -12,10 +12,22 @@ public class Greatsword: Weapon
         if (!character.Inventory.Contains(this))
         {
             character.Inventory.Add(this);
+            SummonFireSpirit(character);
+            
         }
         else
         {
             Console.WriteLine("That item is already equipped.");
+        }
+    }
+
+    private void SummonFireSpirit(Character character)
+    {
+        if (!character.Pets.Any(pet => pet is FireSpirit))
+        {
+            FireSpirit fs = new FireSpirit("Pyro", 10, 10, 10);
+            character.Pets.Add(fs);
+            Console.WriteLine("A fire spirit has been summoned.");
         }
     }
 }

@@ -17,6 +17,8 @@ public class Character
     private List<IItem> _inventory = new List<IItem>(); // Esto puede ir en el constructor primario, además, se puede realizar el Apply añadiendo y quitando items del inventario y añadir el inventario con cada movimiento attack o defence
     public List<IItem> Inventory => _inventory;
     
+    private List<IPet> _pets = new List<IPet>();
+    public List<IPet> Pets => _pets;
 
     public Character(string name, int maxHitPoints, int currentHitPoints, int baseDamage, int baseArmor)
     {
