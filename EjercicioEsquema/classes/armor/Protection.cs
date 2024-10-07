@@ -13,6 +13,8 @@ public abstract class Protection: IItem
         this.armor = armor;
     }
 
+    public int Armor => armor;
+
     public abstract void Apply(Character character);
 
 

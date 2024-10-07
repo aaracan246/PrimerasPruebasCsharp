@@ -1,4 +1,6 @@
-﻿using EjercicioEsquema.interfaces;
+﻿using EjercicioEsquema.classes.armor;
+using EjercicioEsquema.classes.weapon;
+using EjercicioEsquema.interfaces;
 
 namespace EjercicioEsquema.classes;
 
@@ -40,17 +42,45 @@ public class Character
         get => baseArmor;
         set => baseArmor = value;
     }
-    
-    
-    private int Attack()
+
+    private int CheckInventoryWeapons()
     {
-        
-        return baseDamage;
+        int weaponDmg = 0;
+
+        foreach (var item in Inventory)
+        {
+            if (item is Weapon weapon)
+            {
+                weaponDmg += weapon.Damage;
+            }
+        }
+
+        return weaponDmg;
     }
 
-    private int Defense()
+    private int CheckInventoryArmor()
     {
-        return baseArmor;
+        int itemArmor = 0;
+
+        foreach (var item in Inventory)
+        {
+            if (item is Protection protection)
+            {
+                itemArmor += protection.Armor;
+            }
+        }
+
+        return itemArmor;
+    }
+
+    public int Attack()
+    {
+        return CheckInventoryWeapons() + baseDamage;
+    }
+
+    public int Defense()
+    {
+        return CheckInventoryArmor() + baseArmor;
     }
 
     private void Heal(int amount)

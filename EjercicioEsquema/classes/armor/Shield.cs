@@ -10,7 +10,6 @@ public class Shield: Protection
         if (!character.Inventory.Contains(this))
         {
             character.Inventory.Add(this);
-            character.BaseArmor += armor;
         }
         else
         {

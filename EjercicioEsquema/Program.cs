@@ -25,5 +25,5 @@ Console.WriteLine(champion.Name + " is now fully geared!" );
 
 Console.WriteLine(". . .");
 
-Console.WriteLine(champion.Name + "'s dmg is " + champion.BaseDamage + ".");
-Console.WriteLine(champion.Name + "'s armor is " + champion.BaseArmor + ".");
+Console.WriteLine(champion.Name + "'s base dmg is " + champion.BaseDamage + ". And he attacks for " + champion.Attack() + " dmg.");
+Console.WriteLine(champion.Name + "'s base armor is " + champion.BaseArmor + ". And he has " + champion.Defense() + " points of armor.");

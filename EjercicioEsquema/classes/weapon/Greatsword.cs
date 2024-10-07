@@ -12,7 +12,6 @@ public class Greatsword: Weapon
         if (!character.Inventory.Contains(this))
         {
             character.Inventory.Add(this);
-            character.BaseDamage += damage;
         }
         else
         {
