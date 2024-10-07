@@ -29,3 +29,4 @@ Console.WriteLine(". . .");
 
 Console.WriteLine(champion.Name + "'s base dmg is " + champion.BaseDamage + ". And he attacks for " + champion.Attack() + " dmg.");
 Console.WriteLine(champion.Name + "'s base armor is " + champion.BaseArmor + ". And he has " + champion.Defense() + " points of armor.");
+Console.WriteLine("Pyro (pet) could attack for " + champion.Pets[0].Attack() + " points of damage.");
